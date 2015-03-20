@@ -159,7 +159,7 @@ then
     do
         ENV="$ENV $(basename $key)=\"$(cat $key)\""
     done
-    echo "-----> Running: $(cat "$env_dir"/POST_BUILD_COMMAND)"
+    echo "-----> Running: $ENV $(cat "$env_dir"/POST_BUILD_COMMAND)"
     eval "$ENV $(cat "$env_dir"/POST_BUILD_COMMAND)"
 fi
 
